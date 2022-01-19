@@ -1,0 +1,19 @@
+﻿@* @model Bertozzi.Mattia._5H.FormWeb.Models.Prenotazione *@
+
+@model List<Bertozzi.Mattia._5H.FormWeb.Models.Prenotazione>
+
+@{
+    ViewData["Title"] = "Prenotato";
+    int last = Model.Count-1;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Grazie @Model[last].Nome per aver compilato il form</h1>
+    @* <h2>Email: @Model.Email</h2> *@
+    <h1>Elenco Prenotazioni</h1>
+
+    @foreach (var item in Model)
+    {
+        <h1>@item.Nome</h1>
+    }
+</div>
